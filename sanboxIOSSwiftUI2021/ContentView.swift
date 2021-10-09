@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         Text("Hello, world - Welcome to Swift UI")
             .padding()
+            .background(Color.red)
     }
 }
 
