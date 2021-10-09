@@ -10,10 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            
-         
+            NavigationView {
+                VStack {
+                    NavigationLink(destination: WarGameView()) {
+                      Text("Navigate to War Game")
+                    }
+                }
+            }
         }
-       
     }
 }
 
