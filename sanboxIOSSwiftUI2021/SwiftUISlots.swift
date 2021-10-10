@@ -12,6 +12,9 @@ struct SwiftUISlots: View {
     @State public var appleSlot = "apple";
     @State public var cherrySlot = "cherry";
     @State public var starSlot = "star";
+    @State public var score: Int32 = 1000;
+    @State public var Yeahhhh: String = "SLOTS!!.. SLOTS!!";
+    
     
     
     var body: some View {
@@ -21,7 +24,8 @@ struct SwiftUISlots: View {
                 .font(.largeTitle)
                 .frame(width: 300.0, height: 200.0);
             Spacer()
-            Text("Credits:");
+            Text("Credits: \(score)");
+            Text(Yeahhhh);
             Spacer()
             HStack{
                 Spacer()
@@ -45,6 +49,15 @@ struct SwiftUISlots: View {
                 if my_final_set.count == 1 {
                         print("SLOTS!!! SLOTS!!! ERR BODY!!")
                         print(my_list)
+                    score += 100;
+                }
+                else {
+                    score -= 50;
+                    
+                }
+                if score < 1 {
+                    Yeahhhh = "YOU LOST ..LOSER!!!!"
+                    print("You lost BITCH!!!!!");
                 }
                 my_list.removeAll()
 
