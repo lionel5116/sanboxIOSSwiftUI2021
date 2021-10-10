@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct WarGameView: View {
+    
+    //state properties for our views
+    @State public var playerCard = "card5";
+    @State public var cpuCard = "card9";
+    @State public var playerScore = 0;
+    @State public var cpuScore = 0;
+    
     var body: some View {
         
         ZStack {
@@ -20,13 +27,31 @@ struct WarGameView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Image("card2")
+                    Image(playerCard)
                     Spacer()
-                    Image("card3")
+                    Image(cpuCard)
                     Spacer()
                 }
                 Spacer()
-                Image("dealbutton")
+                Button(action: {
+                    //dealAway()
+                    let leftHandValue = Int.random(in: 1...14);
+                    let rightHandValue = Int.random(in: 1...14);
+                    
+                    playerCard = "card\(leftHandValue)"
+                    cpuCard = "card\(rightHandValue)"
+                    
+                    if leftHandValue >  rightHandValue{
+                        print("Left Hand wins with \(leftHandValue) !!!!")
+                        playerScore += 1;
+                    }
+                    else if rightHandValue > leftHandValue {
+                        print("Right Hand wins \(rightHandValue)!!!!")
+                        cpuScore += 1;
+                    }
+                }, label: {
+                    Image("dealbutton")
+                })
                 Spacer()
                 HStack {
                     Spacer()
@@ -35,7 +60,7 @@ struct WarGameView: View {
                             .font(.headline)
                             .foregroundColor(Color.white)
                             .padding(.bottom, 10.0)
-                        Text("0")
+                        Text(String(playerScore))
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }
@@ -45,7 +70,7 @@ struct WarGameView: View {
                             .font(.headline)
                             .foregroundColor(Color.white)
                             .padding(.bottom, 10.0)
-                        Text("0")
+                        Text(String(cpuScore))
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }
@@ -54,6 +79,21 @@ struct WarGameView: View {
                 Spacer()
             } //VStack Container
         } //ZStack
+    }
+}
+
+func dealAway() -> Void {
+    
+    
+    let leftHandValue = Int.random(in: 1...14);
+    let rightHandValue = Int.random(in: 1...14);
+    
+    if leftHandValue >  rightHandValue{
+        print("Left Hand wins with \(leftHandValue) !!!!")
+    }
+    else if rightHandValue > leftHandValue {
+        print("Right Hand wins \(rightHandValue)!!!!")
+        
     }
 }
 

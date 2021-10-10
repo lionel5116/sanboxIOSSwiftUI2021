@@ -17,6 +17,33 @@ struct ContentView: View {
                     }
                 }
             }
+            
+           /*
+            VStack {
+                //Button instance with closure
+                Button("Click Me", action:  {
+                        print("I m Rick James!!!!")
+                })
+                    .padding(.bottom, 10.0)
+           
+               //Button instance with trailing closure
+                Button("Click Me Again")
+                {
+                       print("I m Rick James Bitch!!!!")
+               }
+            
+               //Button Image
+                Button(action: {
+                    print("Hello Let's War IT Bitch!!!")
+                }, label: {
+                    Image("logo")
+                    Text("Edit")
+                })
+            
+               Spacer()
+            }
+            */
+            
         }
     }
 }
