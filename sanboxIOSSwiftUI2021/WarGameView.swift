@@ -35,6 +35,7 @@ struct WarGameView: View {
                 Spacer()
                 Button(action: {
                     //dealAway()
+                    
                     let leftHandValue = Int.random(in: 2...14);
                     let rightHandValue = Int.random(in: 2...14);
                     
@@ -42,13 +43,12 @@ struct WarGameView: View {
                     cpuCard = "card\(rightHandValue)"
                     
                     if leftHandValue >  rightHandValue{
-                        //print("Left Hand wins with \(leftHandValue) !!!!")
                         playerScore += 1;
                     }
                     else if rightHandValue > leftHandValue {
-                        //print("Right Hand wins \(rightHandValue)!!!!")
                         cpuScore += 1;
                     }
+                     
                 }, label: {
                     Image("dealbutton")
                 })
@@ -84,17 +84,6 @@ struct WarGameView: View {
 
 func dealAway() -> Void {
     
-    
-    let leftHandValue = Int.random(in: 1...14);
-    let rightHandValue = Int.random(in: 1...14);
-    
-    if leftHandValue >  rightHandValue{
-        print("Left Hand wins with \(leftHandValue) !!!!")
-    }
-    else if rightHandValue > leftHandValue {
-        print("Right Hand wins \(rightHandValue)!!!!")
-        
-    }
 }
 
 struct WarGameView_Previews: PreviewProvider {
