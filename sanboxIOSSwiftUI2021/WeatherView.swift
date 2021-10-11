@@ -11,7 +11,7 @@ struct WeatherView: View {
     var body: some View {
         
         ZStack{ //bottom layer container is our background
-            LinearGradient(gradient:Gradient(colors:[.blue,.white]),
+            LinearGradient(gradient:Gradient(colors:[.blue, Color("lightBlue")]),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
@@ -22,20 +22,20 @@ struct WeatherView: View {
                     .foregroundColor(.white)
                     .padding()
                 
-                VStack {
+                VStack (spacing: 10){  //for the cloud image and temperature
                     Image(systemName: "cloud.sun.fill")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 180, height: 180)
+                    
+                    //option shift 8 for degrees symbol
+                    Text("76°")
+                        .font(.system(size: 70, weight: .medium ))
+                        .foregroundColor(.white)
                 }
+                .padding(.bottom,40)  //put padding here as opposed to a spacer on the VStack
                 
-                //option shift 8 for degrees symbol
-                Text("76°")
-                    .font(.system(size: 70, weight: .medium ))
-                    .foregroundColor(.white)
-                
-                Spacer()
                 
                 HStack (spacing:20){
                     WeatherDayView(dayOfWeek: "TUE", systemImageName: "cloud.sun.fill", temperature: 74)
@@ -48,6 +48,10 @@ struct WeatherView: View {
                     
                     WeatherDayView(dayOfWeek: "SAT", systemImageName: "snow", temperature: 25)
                 }
+                Spacer()
+                WeatherViewButtonControl(title: "Change Day Time",
+                                  textColor: .blue,
+                                  backgroundcolor: .white)
                 Spacer()
             } //Container for sub elements
     
@@ -84,3 +88,4 @@ struct WeatherDayView: View {
         }
     }
 }
+
