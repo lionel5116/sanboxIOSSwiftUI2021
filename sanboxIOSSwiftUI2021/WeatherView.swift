@@ -28,7 +28,7 @@ struct WeatherView: View {
                     .padding()
                 
                 VStack (spacing: 10){  //for the cloud image and temperature
-                    Image(systemName: "cloud.sun.fill")
+                    Image(systemName: isNight ? "moon.stars.fill" : "cloud.sun.fill")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
