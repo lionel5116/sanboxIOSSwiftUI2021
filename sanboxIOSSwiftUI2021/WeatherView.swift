@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct WeatherView: View {
+    
+    @State private var isNight:Bool = false;
+    
+    
     var body: some View {
         
         ZStack{ //bottom layer container is our background
-            LinearGradient(gradient:Gradient(colors:[.blue, Color("lightBlue")]),
+            LinearGradient(gradient:Gradient(colors:[isNight ? .black : .blue,
+                                                     isNight ? .gray : Color("lightBlue")]),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
@@ -49,12 +54,18 @@ struct WeatherView: View {
                     WeatherDayView(dayOfWeek: "SAT", systemImageName: "snow", temperature: 25)
                 }
                 Spacer()
-                WeatherViewButtonControl(title: "Change Day Time",
-                                  textColor: .blue,
-                                  backgroundcolor: .white)
+                
+                Button {
+                    isNight.toggle();
+                } label: {
+                    //my custom view component button control
+                    WeatherViewButtonControlLabel(title: "Change Day Time",
+                                      textColor: .blue,
+                                      backgroundcolor: .white)
+                }
+                
                 Spacer()
             } //Container for sub elements
-    
         } //ZStack container - bottom background layer
     }
 }

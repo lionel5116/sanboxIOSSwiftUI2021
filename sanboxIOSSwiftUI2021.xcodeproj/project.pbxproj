@@ -12,7 +12,7 @@
 		1506D130271154F30050BE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1506D12F271154F30050BE20 /* Assets.xcassets */; };
 		1506D133271154F30050BE20 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1506D132271154F30050BE20 /* Preview Assets.xcassets */; };
 		155DC10C2714D89F005DEAB7 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DC10B2714D89F005DEAB7 /* WeatherView.swift */; };
-		155DC10E2714EA50005DEAB7 /* WeatherViewButtonControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DC10D2714EA50005DEAB7 /* WeatherViewButtonControl.swift */; };
+		155DC10E2714EA50005DEAB7 /* WeatherViewButtonControlLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DC10D2714EA50005DEAB7 /* WeatherViewButtonControlLabel.swift */; };
 		15CE286927133F12007CD8FD /* SwiftUISlots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CE286827133F12007CD8FD /* SwiftUISlots.swift */; };
 		15E03E7927122ED400584EA9 /* CodeWithChris.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15E03E7827122ED400584EA9 /* CodeWithChris.xcassets */; };
 		15E03E7B27123B4600584EA9 /* WarGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E03E7A27123B4600584EA9 /* WarGameView.swift */; };
@@ -25,7 +25,7 @@
 		1506D12F271154F30050BE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1506D132271154F30050BE20 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		155DC10B2714D89F005DEAB7 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
-		155DC10D2714EA50005DEAB7 /* WeatherViewButtonControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewButtonControl.swift; sourceTree = "<group>"; };
+		155DC10D2714EA50005DEAB7 /* WeatherViewButtonControlLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewButtonControlLabel.swift; sourceTree = "<group>"; };
 		15CE286827133F12007CD8FD /* SwiftUISlots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISlots.swift; sourceTree = "<group>"; };
 		15E03E7827122ED400584EA9 /* CodeWithChris.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CodeWithChris.xcassets; sourceTree = "<group>"; };
 		15E03E7A27123B4600584EA9 /* WarGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarGameView.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 				155DC10B2714D89F005DEAB7 /* WeatherView.swift */,
 				1506D12F271154F30050BE20 /* Assets.xcassets */,
 				1506D131271154F30050BE20 /* Preview Content */,
-				155DC10D2714EA50005DEAB7 /* WeatherViewButtonControl.swift */,
+				155DC10D2714EA50005DEAB7 /* WeatherViewButtonControlLabel.swift */,
 			);
 			path = sanboxIOSSwiftUI2021;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 			files = (
 				155DC10C2714D89F005DEAB7 /* WeatherView.swift in Sources */,
 				1506D12E271154F10050BE20 /* ContentView.swift in Sources */,
-				155DC10E2714EA50005DEAB7 /* WeatherViewButtonControl.swift in Sources */,
+				155DC10E2714EA50005DEAB7 /* WeatherViewButtonControlLabel.swift in Sources */,
 				15CE286927133F12007CD8FD /* SwiftUISlots.swift in Sources */,
 				1506D12C271154F10050BE20 /* sanboxIOSSwiftUI2021App.swift in Sources */,
 				15E03E7B27123B4600584EA9 /* WarGameView.swift in Sources */,
