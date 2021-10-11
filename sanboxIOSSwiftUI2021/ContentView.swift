@@ -15,8 +15,13 @@ struct ContentView: View {
                     NavigationLink(destination: WarGameView()) {
                       Text("Navigate to War Game")
                     }
+                   
                     NavigationLink(destination: SwiftUISlots()) {
                       Text("Slots!!.. Slots!!! err body")
+                    }
+                   
+                    NavigationLink(destination: WeatherView()) {
+                      Text("Weather View")
                     }
                 }
             }
