@@ -19,6 +19,7 @@ struct ContentView: View {
                             .font(.system(size:20,weight: .bold,design: .default))
                             .cornerRadius(10)
                     }
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                    
                     NavigationLink(destination: SwiftUISlots()) {
                       Text("Slots!!.. Slots!!! err body")
@@ -27,6 +28,7 @@ struct ContentView: View {
                             .font(.system(size:20,weight: .bold,design: .default))
                             .cornerRadius(10)
                     }
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                    
                     NavigationLink(destination: WeatherView()) {
                       Text("Weather View")
@@ -36,6 +38,7 @@ struct ContentView: View {
                             .cornerRadius(10)
                         
                     }
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                 }
             }
             
