@@ -17,28 +17,31 @@ struct ContentView: View {
                             .frame(width: 280, height: 50)
                             .foregroundColor(.blue)
                             .font(.system(size:20,weight: .bold,design: .default))
-                            .cornerRadius(10)
+                            .background(LinearGradient(gradient:Gradient(colors: [Color.red,Color.green]),startPoint: .leading,endPoint:.trailing))
+                            .cornerRadius(40)
                     }
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                    
                    
                     NavigationLink(destination: SwiftUISlots()) {
                       Text("Slots!!.. Slots!!! err body")
                             .frame(width: 280, height: 50)
-                            .foregroundColor(.green)
+                            .foregroundColor(.blue)
                             .font(.system(size:20,weight: .bold,design: .default))
-                            .cornerRadius(10)
+                            .background(LinearGradient(gradient:Gradient(colors: [Color.red,Color.green]),startPoint: .leading,endPoint:.trailing))
+                            .cornerRadius(40)
                     }
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                    
                    
                     NavigationLink(destination: WeatherView()) {
                       Text("Weather View")
                             .frame(width: 280, height: 50)
                             .foregroundColor(.blue)
                             .font(.system(size:20,weight: .bold,design: .default))
-                            .cornerRadius(10)
+                            .background(LinearGradient(gradient:Gradient(colors: [Color.red,Color.green]),startPoint: .leading,endPoint:.trailing))
+                            .cornerRadius(40)
                         
                     }
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                    
                 }
             }
             
