@@ -14,14 +14,27 @@ struct ContentView: View {
                 VStack {
                     NavigationLink(destination: WarGameView()) {
                       Text("Navigate to War Game")
+                            .frame(width: 280, height: 50)
+                            .foregroundColor(.blue)
+                            .font(.system(size:20,weight: .bold,design: .default))
+                            .cornerRadius(10)
                     }
                    
                     NavigationLink(destination: SwiftUISlots()) {
                       Text("Slots!!.. Slots!!! err body")
+                            .frame(width: 280, height: 50)
+                            .foregroundColor(.green)
+                            .font(.system(size:20,weight: .bold,design: .default))
+                            .cornerRadius(10)
                     }
                    
                     NavigationLink(destination: WeatherView()) {
                       Text("Weather View")
+                            .frame(width: 280, height: 50)
+                            .foregroundColor(.blue)
+                            .font(.system(size:20,weight: .bold,design: .default))
+                            .cornerRadius(10)
+                        
                     }
                 }
             }
