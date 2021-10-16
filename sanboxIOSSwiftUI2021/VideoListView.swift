@@ -5,6 +5,16 @@
 //  Created by lionel jones on 10/15/21.
 //
 
+
+//MARK: Implemention of ListView with Navigation
+//The Hierarchy
+//NavigationView
+//  --List
+//   --NavigationLink
+//    --Cell
+//
+//
+
 import SwiftUI
 
 struct VideoListView: View {
@@ -15,12 +25,12 @@ struct VideoListView: View {
     var body: some View {
         NavigationView {
             List(videos, id: \.id){ video in//container ->now my list when embedded
-                NavigationLink(destination: VideoDetailView(video: video), label: {
-                    VideoCell(video: video)
+                NavigationLink(destination: VideoDetailView(video: video), label: { //Navigation link
+                    VideoCell(video: video)  //cell that is now a reusable view
                 })  //Navigation Link is wrapping our cell content
             }
-            .navigationTitle("Lionel's Top 10")//container
-        }  //Navigation
+            .navigationTitle("Lionel's Top 10")//container ->List
+        }  //NavigationView
     }
 }
 
