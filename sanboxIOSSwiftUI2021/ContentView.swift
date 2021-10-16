@@ -45,9 +45,9 @@ struct ContentView: View {
                     NavigationLink(destination: VideoListView()) {
                       Text("Video List View")
                             .frame(width: 280, height: 50)
-                            .foregroundColor(.blue)
                             .font(.system(size:20,weight: .bold,design: .default))
-                            .background(LinearGradient(gradient:Gradient(colors: [Color.red,Color.green]),startPoint: .leading,endPoint:.trailing))
+                            .background(Color(.systemRed))
+                            .foregroundColor(.white)
                             .cornerRadius(40)
                         
                     }
