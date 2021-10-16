@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Video: Identifiable {
-    let id =  UUID()
+struct Video: Identifiable {  //Need to add this when working with objects as cell items
+    let id =  UUID()          //Need to add this when working with objects as cell items - needs a unique identifier/key
     let imageName: String
     let title: String 
     let description: String
