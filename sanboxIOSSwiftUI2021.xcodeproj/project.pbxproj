@@ -15,12 +15,23 @@
 		1536BB12271A268C00D78882 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1536BB11271A268C00D78882 /* Video.swift */; };
 		1536BB14271A27BF00D78882 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1536BB13271A27BF00D78882 /* VideoListView.swift */; };
 		1536BB16271A2D7C00D78882 /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1536BB15271A2D7C00D78882 /* VideoDetailView.swift */; };
+		15503895271A73F500299AAE /* sanboxIOSSwiftUI2021Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15503894271A73F500299AAE /* sanboxIOSSwiftUI2021Tests.swift */; };
 		155DC10C2714D89F005DEAB7 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DC10B2714D89F005DEAB7 /* WeatherView.swift */; };
 		155DC10E2714EA50005DEAB7 /* WeatherViewButtonControlLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DC10D2714EA50005DEAB7 /* WeatherViewButtonControlLabel.swift */; };
 		15CE286927133F12007CD8FD /* SwiftUISlots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CE286827133F12007CD8FD /* SwiftUISlots.swift */; };
 		15E03E7927122ED400584EA9 /* CodeWithChris.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15E03E7827122ED400584EA9 /* CodeWithChris.xcassets */; };
 		15E03E7B27123B4600584EA9 /* WarGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E03E7A27123B4600584EA9 /* WarGameView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15503896271A73F500299AAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1506D120271154F10050BE20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1506D127271154F10050BE20;
+			remoteInfo = sanboxIOSSwiftUI2021;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1506D128271154F10050BE20 /* sanboxIOSSwiftUI2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sanboxIOSSwiftUI2021.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +43,8 @@
 		1536BB11271A268C00D78882 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		1536BB13271A27BF00D78882 /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
 		1536BB15271A2D7C00D78882 /* VideoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
+		15503892271A73F500299AAE /* sanboxIOSSwiftUI2021Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sanboxIOSSwiftUI2021Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15503894271A73F500299AAE /* sanboxIOSSwiftUI2021Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sanboxIOSSwiftUI2021Tests.swift; sourceTree = "<group>"; };
 		155DC10B2714D89F005DEAB7 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		155DC10D2714EA50005DEAB7 /* WeatherViewButtonControlLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewButtonControlLabel.swift; sourceTree = "<group>"; };
 		15CE286827133F12007CD8FD /* SwiftUISlots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISlots.swift; sourceTree = "<group>"; };
@@ -47,6 +60,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1550388F271A73F500299AAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				1506D12A271154F10050BE20 /* sanboxIOSSwiftUI2021 */,
+				15503893271A73F500299AAE /* sanboxIOSSwiftUI2021Tests */,
 				1506D129271154F10050BE20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				1506D128271154F10050BE20 /* sanboxIOSSwiftUI2021.app */,
+				15503892271A73F500299AAE /* sanboxIOSSwiftUI2021Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +116,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		15503893271A73F500299AAE /* sanboxIOSSwiftUI2021Tests */ = {
+			isa = PBXGroup;
+			children = (
+				15503894271A73F500299AAE /* sanboxIOSSwiftUI2021Tests.swift */,
+			);
+			path = sanboxIOSSwiftUI2021Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +144,24 @@
 			productReference = 1506D128271154F10050BE20 /* sanboxIOSSwiftUI2021.app */;
 			productType = "com.apple.product-type.application";
 		};
+		15503891271A73F500299AAE /* sanboxIOSSwiftUI2021Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15503898271A73F500299AAE /* Build configuration list for PBXNativeTarget "sanboxIOSSwiftUI2021Tests" */;
+			buildPhases = (
+				1550388E271A73F500299AAE /* Sources */,
+				1550388F271A73F500299AAE /* Frameworks */,
+				15503890271A73F500299AAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15503897271A73F500299AAE /* PBXTargetDependency */,
+			);
+			name = sanboxIOSSwiftUI2021Tests;
+			productName = sanboxIOSSwiftUI2021Tests;
+			productReference = 15503892271A73F500299AAE /* sanboxIOSSwiftUI2021Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -126,6 +174,10 @@
 				TargetAttributes = {
 					1506D127271154F10050BE20 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					15503891271A73F500299AAE = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 1506D127271154F10050BE20;
 					};
 				};
 			};
@@ -143,6 +195,7 @@
 			projectRoot = "";
 			targets = (
 				1506D127271154F10050BE20 /* sanboxIOSSwiftUI2021 */,
+				15503891271A73F500299AAE /* sanboxIOSSwiftUI2021Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +209,13 @@
 				1536BB10271A264100D78882 /* seanallen.xcassets in Resources */,
 				1506D133271154F30050BE20 /* Preview Assets.xcassets in Resources */,
 				1506D130271154F30050BE20 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15503890271A73F500299AAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +238,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1550388E271A73F500299AAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15503895271A73F500299AAE /* sanboxIOSSwiftUI2021Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15503897271A73F500299AAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1506D127271154F10050BE20 /* sanboxIOSSwiftUI2021 */;
+			targetProxy = 15503896271A73F500299AAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1506D134271154F30050BE20 /* Debug */ = {
@@ -357,6 +433,52 @@
 			};
 			name = Release;
 		};
+		15503899271A73F500299AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26668HS2H3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SandBoxiOSCareerProject.sanboxIOSSwiftUI2021Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sanboxIOSSwiftUI2021.app/sanboxIOSSwiftUI2021";
+			};
+			name = Debug;
+		};
+		1550389A271A73F500299AAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26668HS2H3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SandBoxiOSCareerProject.sanboxIOSSwiftUI2021Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sanboxIOSSwiftUI2021.app/sanboxIOSSwiftUI2021";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -374,6 +496,15 @@
 			buildConfigurations = (
 				1506D137271154F30050BE20 /* Debug */,
 				1506D138271154F30050BE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15503898271A73F500299AAE /* Build configuration list for PBXNativeTarget "sanboxIOSSwiftUI2021Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15503899271A73F500299AAE /* Debug */,
+				1550389A271A73F500299AAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
