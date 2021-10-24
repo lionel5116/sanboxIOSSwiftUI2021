@@ -11,6 +11,9 @@
 		1506D12E271154F10050BE20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1506D12D271154F10050BE20 /* ContentView.swift */; };
 		1506D130271154F30050BE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1506D12F271154F30050BE20 /* Assets.xcassets */; };
 		1506D133271154F30050BE20 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1506D132271154F30050BE20 /* Preview Assets.xcassets */; };
+		151C57772725BAB5004108B9 /* CoreDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C57762725BAB5004108B9 /* CoreDataView.swift */; };
+		151C577B2725BB47004108B9 /* dataStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 151C57792725BB47004108B9 /* dataStore.xcdatamodeld */; };
+		151C577D2725BC94004108B9 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C577C2725BC94004108B9 /* PersistenceController.swift */; };
 		1536BB10271A264100D78882 /* seanallen.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1536BB0F271A264100D78882 /* seanallen.xcassets */; };
 		1536BB12271A268C00D78882 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1536BB11271A268C00D78882 /* Video.swift */; };
 		1536BB14271A27BF00D78882 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1536BB13271A27BF00D78882 /* VideoListView.swift */; };
@@ -39,6 +42,9 @@
 		1506D12D271154F10050BE20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1506D12F271154F30050BE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1506D132271154F30050BE20 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		151C57762725BAB5004108B9 /* CoreDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataView.swift; sourceTree = "<group>"; };
+		151C577A2725BB47004108B9 /* dataStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataStore.xcdatamodel; sourceTree = "<group>"; };
+		151C577C2725BC94004108B9 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		1536BB0F271A264100D78882 /* seanallen.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = seanallen.xcassets; sourceTree = "<group>"; };
 		1536BB11271A268C00D78882 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		1536BB13271A27BF00D78882 /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
@@ -91,7 +97,9 @@
 		1506D12A271154F10050BE20 /* sanboxIOSSwiftUI2021 */ = {
 			isa = PBXGroup;
 			children = (
+				151C57782725BAD7004108B9 /* model */,
 				1506D12B271154F10050BE20 /* sanboxIOSSwiftUI2021App.swift */,
+				151C57762725BAB5004108B9 /* CoreDataView.swift */,
 				1506D12D271154F10050BE20 /* ContentView.swift */,
 				15E03E7A27123B4600584EA9 /* WarGameView.swift */,
 				15CE286827133F12007CD8FD /* SwiftUISlots.swift */,
@@ -100,6 +108,7 @@
 				1536BB11271A268C00D78882 /* Video.swift */,
 				1536BB13271A27BF00D78882 /* VideoListView.swift */,
 				1536BB15271A2D7C00D78882 /* VideoDetailView.swift */,
+				151C577C2725BC94004108B9 /* PersistenceController.swift */,
 				15E03E7827122ED400584EA9 /* CodeWithChris.xcassets */,
 				1536BB0F271A264100D78882 /* seanallen.xcassets */,
 				1506D12F271154F30050BE20 /* Assets.xcassets */,
@@ -114,6 +123,14 @@
 				1506D132271154F30050BE20 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		151C57782725BAD7004108B9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				151C57792725BB47004108B9 /* dataStore.xcdatamodeld */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		15503893271A73F500299AAE /* sanboxIOSSwiftUI2021Tests */ = {
@@ -228,6 +245,8 @@
 			files = (
 				155DC10C2714D89F005DEAB7 /* WeatherView.swift in Sources */,
 				1506D12E271154F10050BE20 /* ContentView.swift in Sources */,
+				151C577B2725BB47004108B9 /* dataStore.xcdatamodeld in Sources */,
+				151C577D2725BC94004108B9 /* PersistenceController.swift in Sources */,
 				155DC10E2714EA50005DEAB7 /* WeatherViewButtonControlLabel.swift in Sources */,
 				15CE286927133F12007CD8FD /* SwiftUISlots.swift in Sources */,
 				1536BB16271A2D7C00D78882 /* VideoDetailView.swift in Sources */,
@@ -235,6 +254,7 @@
 				1506D12C271154F10050BE20 /* sanboxIOSSwiftUI2021App.swift in Sources */,
 				1536BB12271A268C00D78882 /* Video.swift in Sources */,
 				15E03E7B27123B4600584EA9 /* WarGameView.swift in Sources */,
+				151C57772725BAB5004108B9 /* CoreDataView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +530,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		151C57792725BB47004108B9 /* dataStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				151C577A2725BB47004108B9 /* dataStore.xcdatamodel */,
+			);
+			currentVersion = 151C577A2725BB47004108B9 /* dataStore.xcdatamodel */;
+			path = dataStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1506D120271154F10050BE20 /* Project object */;
 }

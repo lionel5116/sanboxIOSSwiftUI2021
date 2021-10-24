@@ -52,6 +52,16 @@ struct ContentView: View {
                         
                     }
                     
+                    NavigationLink(destination: CoreDataView()) {
+                      Text("Core Data Example")
+                            .frame(width: 280, height: 50)
+                            .font(.system(size:20,weight: .bold,design: .default))
+                            .background(Color(.systemRed))
+                            .foregroundColor(.white)
+                            .cornerRadius(40)
+                        
+                    }
+                    
                 }
             }
             
