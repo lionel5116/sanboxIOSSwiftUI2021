@@ -27,9 +27,79 @@ struct CoreDataView: View {
     @State private var isActionSheetPresented = false
     @State private var isAlertPresented = false
     
+    @State var mCategory:String = "";
+    @State var mMake:String = "";
+    
+    
     var body: some View {
-        VStack{
+        
+        VStack (spacing: 20){//VStack Container
+           
+            VStack{
+                Label("Enter a Category for Car",systemImage: "")
+                      .frame(width: 280, height: 50)
+                      
+                TextField(
+                        "",
+                        text: $mCategory
+                 )
+                .frame(width: 280, height: 50)
+                .padding(4)
+                .border(Color.gray, width: 1)
+              
+                Label("Enter Model Name",systemImage: "")
+                      .frame(width: 280, height: 50)
+                TextField(
+                        "",
+                        text: $mMake
+                 )
+                 .frame(width: 280, height: 50)
+                 .padding(4)
+                 .border(Color.gray, width: 1)
+            }
+           
+           
+            Button(action: {
+                let category = Category(context: manageObjectContext)
+                category.name = mCategory
+                PersistenceController.shared.save()
+            }, label: {
+                Text("Add Category")
+            })
+            .frame(width: 280, height: 50)
+            .font(.system(size:20,weight: .bold,design: .default))
+            .background(Color(.systemBlue))
+            .foregroundColor(.white)
+            .cornerRadius(40)
             
+            Button(action: {
+                let item = Item(context: manageObjectContext)
+                item.name = mMake
+                item.toCatagory  = categories[0]
+                PersistenceController.shared.save()
+            }, label: {
+                Text("Add Model")
+            })
+            .frame(width: 280, height: 50)
+            .font(.system(size:20,weight: .bold,design: .default))
+            .background(Color(.systemBlue))
+            .foregroundColor(.white)
+            .cornerRadius(40)
+            
+            Button(action: {
+                let category = categories[0]
+                PersistenceController.shared.delete(category)
+                
+            }, label: {
+                Text("Delete Category")
+            })
+            .frame(width: 280, height: 50)
+            .font(.system(size:20,weight: .bold,design: .default))
+            .background(Color(.systemRed))
+            .foregroundColor(.white)
+            .cornerRadius(40)
+            
+            /*
             Button(action: {
                 let category = Category(context: manageObjectContext)
                 category.name = "Porsche"
@@ -79,6 +149,8 @@ struct CoreDataView: View {
             .alert(isPresented:$isAlertPresented, content: {
                 Alert(title: Text("Please add a category"), message: nil, dismissButton: .cancel(Text("OK")))
             })
+            */
+            
             
             List {
                 ForEach(items, id:\.self) {
@@ -87,9 +159,8 @@ struct CoreDataView: View {
                 }
                 .onDelete(perform: removeItem)
             }
-           
             
-        }
+        }//VStack Container
     }
     
     func removeItem(at offsets: IndexSet) {
