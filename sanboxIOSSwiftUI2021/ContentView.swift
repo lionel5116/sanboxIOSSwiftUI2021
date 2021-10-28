@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+@available(iOS 15.0, *)
+@available(iOS 15.0, *)
 struct ContentView: View {
+    @available(iOS 15.0, *)
     var body: some View {
         VStack {
             NavigationView {
@@ -52,15 +55,17 @@ struct ContentView: View {
                         
                     }
                     
-                    NavigationLink(destination: CoreDataView()) {
-                      Text("Core Data Example")
-                            .frame(width: 280, height: 50)
-                            .font(.system(size:20,weight: .bold,design: .default))
-                            .background(Color(.systemRed))
-                            .foregroundColor(.white)
-                            .cornerRadius(40)
-                        
-                    }
+                   
+                        NavigationLink(destination: CoreDataView()) {
+                            Text("Core Data Example")
+                                .frame(width: 280, height: 50)
+                                .font(.system(size:20,weight: .bold,design: .default))
+                                .background(Color(.systemRed))
+                                .foregroundColor(.white)
+                                .cornerRadius(40)
+                            
+                        }
+                    
                     
                 }
             }
@@ -95,9 +100,13 @@ struct ContentView: View {
     }
 }
 
+@available(iOS 15.0, *)
 struct ContentView_Previews: PreviewProvider {
+    @available(iOS 15.0, *)
     static var previews: some View {
-        ContentView()
+       
+            ContentView()
+       
     }
 }
 

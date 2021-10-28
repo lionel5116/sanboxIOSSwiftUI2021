@@ -3,9 +3,11 @@
 //  sanboxIOSSwiftUI2021
 //
 //  Created by lionel jones on 10/24/21.
+//The No symbol named '' is there because we are building in iOS 15 now
 //
 
 import SwiftUI
+
 
 struct CoreDataView: View {
     
@@ -29,6 +31,11 @@ struct CoreDataView: View {
     
     @State var mCategory:String = "";
     @State var mMake:String = "";
+
+    @FocusState private var mCategoryIsFocused: Bool;
+    @FocusState private var mMakeIsFocused: Bool;
+    
+    
     
     
     var body: some View {
@@ -46,6 +53,7 @@ struct CoreDataView: View {
                 .frame(width: 280, height: 50)
                 .padding(4)
                 .border(Color.gray, width: 1)
+                .focused($mCategoryIsFocused)
               
                 Label("Enter Model Name",systemImage: "")
                       .frame(width: 280, height: 50)
@@ -56,6 +64,7 @@ struct CoreDataView: View {
                  .frame(width: 280, height: 50)
                  .padding(4)
                  .border(Color.gray, width: 1)
+                 .focused($mMakeIsFocused)
             }
            
            
@@ -63,6 +72,8 @@ struct CoreDataView: View {
                 let category = Category(context: manageObjectContext)
                 category.name = mCategory
                 PersistenceController.shared.save()
+                mMakeIsFocused = false;
+                
             }, label: {
                 Text("Add Category")
             })
@@ -77,6 +88,7 @@ struct CoreDataView: View {
                 item.name = mMake
                 item.toCatagory  = categories[0]
                 PersistenceController.shared.save()
+                mMakeIsFocused = false;
             }, label: {
                 Text("Add Model")
             })
@@ -89,6 +101,8 @@ struct CoreDataView: View {
             Button(action: {
                 let category = categories[0]
                 PersistenceController.shared.delete(category)
+                mMakeIsFocused = false;
+                mMakeIsFocused = false;
                 
             }, label: {
                 Text("Delete Category")
@@ -173,6 +187,8 @@ struct CoreDataView: View {
 
 struct CoreDataView_Previews: PreviewProvider {
     static var previews: some View {
-        CoreDataView()
+       
+            CoreDataView()
+       
     }
 }
