@@ -32,8 +32,8 @@ struct CoreDataView: View {
     @State var mCategory:String = "";
     @State var mMake:String = "";
 
-    @FocusState private var mCategoryIsFocused: Bool;
-    @FocusState private var mMakeIsFocused: Bool;
+    //@FocusState private var mCategoryIsFocused: Bool;
+    //@FocusState private var mMakeIsFocused: Bool;
     
     
     
@@ -53,7 +53,7 @@ struct CoreDataView: View {
                 .frame(width: 280, height: 50)
                 .padding(4)
                 .border(Color.gray, width: 1)
-                .focused($mCategoryIsFocused)
+                //.focused($mCategoryIsFocused)
               
                 Label("Enter Model Name",systemImage: "")
                       .frame(width: 280, height: 50)
@@ -64,7 +64,7 @@ struct CoreDataView: View {
                  .frame(width: 280, height: 50)
                  .padding(4)
                  .border(Color.gray, width: 1)
-                 .focused($mMakeIsFocused)
+                //.focused($mMakeIsFocused)
             }
            
            
@@ -72,7 +72,8 @@ struct CoreDataView: View {
                 let category = Category(context: manageObjectContext)
                 category.name = mCategory
                 PersistenceController.shared.save()
-                mMakeIsFocused = false;
+                //mMakeIsFocused = false;
+                hideKeyboard()
                 
             }, label: {
                 Text("Add Category")
@@ -88,7 +89,8 @@ struct CoreDataView: View {
                 item.name = mMake
                 item.toCatagory  = categories[0]
                 PersistenceController.shared.save()
-                mMakeIsFocused = false;
+                hideKeyboard()
+                //mMakeIsFocused = false;
             }, label: {
                 Text("Add Model")
             })
@@ -101,8 +103,9 @@ struct CoreDataView: View {
             Button(action: {
                 let category = categories[0]
                 PersistenceController.shared.delete(category)
-                mMakeIsFocused = false;
-                mMakeIsFocused = false;
+                hideKeyboard()
+                //mMakeIsFocused = false;
+                //mMakeIsFocused = false;
                 
             }, label: {
                 Text("Delete Category")
@@ -192,3 +195,11 @@ struct CoreDataView_Previews: PreviewProvider {
        
     }
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),to: nil,from: nil,for: nil)
+    }
+}
+#endif
