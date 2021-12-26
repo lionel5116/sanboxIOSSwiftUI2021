@@ -8,7 +8,6 @@
 import SwiftUI
 
 @available(iOS 15.0, *)
-@available(iOS 15.0, *)
 struct ContentView: View {
     @available(iOS 15.0, *)
     var body: some View {
@@ -69,32 +68,6 @@ struct ContentView: View {
                     
                 }
             }
-            
-           /*
-            VStack {
-                //Button instance with closure
-                Button("Click Me", action:  {
-                        print("I m Rick James!!!!")
-                })
-                    .padding(.bottom, 10.0)
-           
-               //Button instance with trailing closure
-                Button("Click Me Again")
-                {
-                       print("I m Rick James Bitch!!!!")
-               }
-            
-               //Button Image
-                Button(action: {
-                    print("Hello Let's War IT Bitch!!!")
-                }, label: {
-                    Image("logo")
-                    Text("Edit")
-                })
-            
-               Spacer()
-            }
-            */
             
         }
     }
